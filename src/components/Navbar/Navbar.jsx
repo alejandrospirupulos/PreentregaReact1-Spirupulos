@@ -1,5 +1,5 @@
 import React from 'react'
-import Carwidget from '../Carwidget/Carwidget'
+import Carwidget from '../Carwidget/carWidget'
 //import './Navbar.scss'
 
 
@@ -7,14 +7,14 @@ export const Navbar = () => {
   return (
     <header className='header'>
       <div className='header_container'>
-        {/* <h1 className='header_title'>Logo</h1> */}
-        <img src="/public/vite.svg" alt="Logo" />
+        <h1 className='header_title'>Sae company</h1> *
+        <img src="/src/assets/logo.png" alt="" />
         <nav className='navbar'>
-          <a className='navbar_link' href="#">Enlance 1</a>
-          <a className='navbar_link' href="#">Enlance 2</a>
-          <a className='navbar_link' href="#">Enlance 3</a>
+          <a className='navbar_link' href="#">Inicio</a>
+          <a className='navbar_link' href="#">Quienes somos</a>
+          <a className='navbar_link' href="#">Contacto</a>
         </nav>
-        <Carwidget/>
+        <carWidget/>
       </div>
     </header>
   )
