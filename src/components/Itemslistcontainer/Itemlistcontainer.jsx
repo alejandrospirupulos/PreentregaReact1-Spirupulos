@@ -1,14 +1,29 @@
-//import './Itemslistcontainer.scss'
 
-const Itemlistcontainer = ({greeting}) => {
+import { useState, useEffect } from "react"
+import { pedirDatos } from "../../utils/utils"
+import { Itemlist } from "../Itemlist/Itemlist"
+
+const Itemlistcontainer = () => {
+    
+    const [productos, setProductos] = useState ([])
+
+      useEffect (() => {
+        pedirDatos () // <= Promise 
+        .then ((data) => {
+            setProductos (data)
+        })
+        
+      }, [])
+        
+
     return (
-        <section className="list-container"> 
-            <h2 className="list-title">Productos</h2> {/* // catalogo de Productos */}
-            <div>{greeting}</div>
-            <hr />
-        </section>
+        <>
+        <Itemlist productos={productos} />
+        </>
+ 
+        
     )
 }
-<Itemlistcontainer greeting = "hola soy una prop"/>
 export default Itemlistcontainer
+
 
