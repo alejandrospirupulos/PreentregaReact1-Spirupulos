@@ -8,7 +8,9 @@ export const ItemCard = ({item}) => {
     <hr />
     <p>{item.description}</p>
     <p className="text-xl font-bold">Precio: $ {item.price}</p>
-    <button>Ver mas</button>
+    <button>
+      <link to={'/item/${item.id}'}>Ver mas</link>
+    </button>
     </article>
   )
 }

@@ -7,9 +7,8 @@ export const Itemlist = ({productos}) => {
             <h2 className="list-title">Productos</h2> 
             <hr />
             <div className='divi'>
-            <p>{ productos.length > 0 && productos[0].name}</p>
-            { productos.map((item) => <ItemCard item={item} /> )}
+            { productos.map((item) => <ItemCard key={item.id} item={item} /> )}
             </div>
         </section>
-  )
-}
+  );
+};
