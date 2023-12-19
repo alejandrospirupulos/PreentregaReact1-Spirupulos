@@ -52,7 +52,7 @@
         name: "Producto 7",
         price: 20000,
         categoria:'Tvs',
-        img: "https://medias.musimundo.com/medias/size300-149932-01.jpg?context=bWFzdGVyfGltYWdlc3wxODU1NnxpbWFnZS9qcGVnfGhlYi9oNTcvMTA1MTk5NDA0OTc0Mzgvc2l6ZTMwMF8xNDk5MzJfMDEuanBnfDVlNDZiMThhZTZhODlhN2RmNzZiMTg1ODFkYWQzZTJmMDJkNzdkOGMzZTRmZTk1YTI3Yjc0Yjc2ZGIxMWJjMTA",
+        img: "https://medias.musimundo.com/medias/size300-149845-01.jpg?context=bWFzdGVyfGltYWdlc3wyMTUxNHxpbWFnZS9qcGVnfGhjNC9oNjAvMTA1MTUwMzI1MDYzOTgvc2l6ZTMwMF8xNDk4NDVfMDEuanBnfGZmYmVjMmRhZmEyYTIxNTUxMjliMWQ0OTAzNDM0YzE4ODAyMGViYTFmMTUyZmEzMWUxNTk1ZWRlN2M5NzlhZDU",
         description: 'Televisor. Pantalla 4K de 75". Resolucion: 3840 x 2160 Px. Un nivel diferente de UHD con tecnologia de fosforo avanzada. La tecnologia Dynamic Display crea una luz blanca pura a partir de combinaciones RGB con una amplia gama de colores, por lo que brinda colores ricos y realistas. Crystal Processor 4K proporciona una perfecta experiencia 4K, expresando los colores con mayor precision ymejorando el contenido que te gusta. OTS Lite es una funcion que proporciona un sonido envolvente 3D a traves de altavoces virtuales. El sonido tridimensional es entregado por dos canales de audio superiores virtuales que se mueven a lo largo de los movimientos dentro de la escena, lo cual permite sentir una mayor inmersion dentro de las escenas que se muestran en pantalla. Potencia: 20 RMS. Puertos: Usb x 2. HDMI x 3. WIFI. Bluetooth. Sintonizador TDA.',
     },
     {
