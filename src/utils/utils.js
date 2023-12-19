@@ -7,3 +7,4 @@ export const pedirDatos = () => {
     }, 3000);
     })
 }
+export default pedirDatos

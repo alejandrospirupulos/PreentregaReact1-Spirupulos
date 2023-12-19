@@ -96,3 +96,5 @@
         description: 'Tablet. Pantalla de 9", resolucion 1024 x 600. Procesador Quad Core RK3126 (1.2GHz). Capacidad 16 Gb. RAM 1 Gb. Camara frontal y trasera. Conexiones: Bluetooth. Wi Fi. Sistema operativo Android go. Parlantes. Bateria 2000 mAh. Incluye funda protectora.',
     }
 ]
+ 
+

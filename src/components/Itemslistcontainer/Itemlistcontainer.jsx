@@ -10,7 +10,7 @@ const Itemlistcontainer = () => {
   const [loading,setLoading ] = useState(true)
 
   const {categoriaId} = useParams()
-  console.log(categoriaId)
+
 
 
 
