@@ -11,7 +11,7 @@ export const ItemCard = ({item}) => {
     <p>{item.description}</p>
     <p className="text-xl font-bold">Precio: $ {item.price}</p>
     <button>
-      <Link to={'/item/${item.id}'}>Ver mas</Link>
+      <Link to={`/item/${item.id}`}>Ver mas</Link>
     </button>
     </article>
   )

@@ -1,8 +1,8 @@
-import React from 'react'
+/* import React from 'react'
+
 
 
 const ItemDetail = ({ item }) => {
-
   return (
     <div>
 
@@ -21,7 +21,7 @@ const ItemDetail = ({ item }) => {
   )
 }
 export default ItemDetail 
-/* import React from 'react';
+import React from 'react'; */
 
 const ItemDetail = ({ item }) => {
   // Verifica si item está definido antes de acceder a sus propiedades
@@ -45,4 +45,4 @@ const ItemDetail = ({ item }) => {
   );
 };
 
-export default ItemDetail; */
+export default ItemDetail; 
