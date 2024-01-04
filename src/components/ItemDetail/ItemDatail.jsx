@@ -1,24 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Quantityselector from './Quantityselector'
 import { ColorSelector } from './ColorSelector'
+import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ item }) => {
-
-  const [cantidad, setCantidad] = useState(1)
-  const [color, setColor] = useState("")
   
-   // console.log("Item detail", color)
-
+  const {addToCart, isInCart} = useContext(CartContext)
+  const [cantidad, setCantidad] = useState(1)
+  
   const handlerAgregar = () => {
     const itemToCart = {
       ...item,
-      cantidad,
-      color
+      cantidad
     }
 
-    console.log(itemToCart)
+    addToCart(itemToCart)
   }
-
   return (
     <div>
 
@@ -30,20 +28,23 @@ const ItemDetail = ({ item }) => {
       <p>{item.description}</p>
       <div>
         <p className="text-xl font-bold">Precio: $ {item.price}</p>
-      </div>
-
-      <Quantityselector
-
+     
+      {
+        isInCart(item.id )
+        ? <button to="/cart">Termina mi compra</button>
+        : <>
+            <Quantityselector
         cantidad={cantidad}
         stock={item.stock}
         setCantidad={setCantidad}
       />
-
-
-    <ColorSelector setColor={setColor}/>
-
       <button onClick={handlerAgregar}>Agregar al carrito</button>
-
+         
+          </>
+      }
+      
+     
+      </div>
     </div>
   )
 }
