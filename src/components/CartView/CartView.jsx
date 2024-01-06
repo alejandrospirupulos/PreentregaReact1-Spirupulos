@@ -1,12 +1,15 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import trashIcon from '../../assets/trash.svg'
+import { UserContext } from '../ItemDetail/UserContext'
 
 
  const CartView = () => {
     const {cart,totalCart, clearCart, removeItem} = useContext(CartContext )
+    const {user} = useContext(UserContext)
   return (
     <section>
+        <p>bienvenido:{user.email}</p>
         <h2>Tu compra</h2>
         <hr />
 

@@ -8,6 +8,7 @@ import { CartContext } from '../../context/CartContext';
 
     const {itemsInCart} = useContext(CartContext)
    
+   
   return (
     <Link to="/cart">
         <img src={cartIcon} alt="Cart icon" />

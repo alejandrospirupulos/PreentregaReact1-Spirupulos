@@ -7,6 +7,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
 import CartView from './components/CartView/CartView';
+import { UserProvider } from './components/ItemDetail/UserContext';
+
+
 
 
 
@@ -16,9 +19,10 @@ function App() {
   const [user,setUser] = useState ()
 
   return (
-        <CartProvider>
-
         
+
+        <UserProvider>
+        <CartProvider>
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -28,8 +32,10 @@ function App() {
             <Route path='/item/:itemId' element={<ItemDetailContainer />} />
           </Routes>
         </BrowserRouter>
-
         </CartProvider>
+        </UserProvider>
+        
+       
     
   )
 }
