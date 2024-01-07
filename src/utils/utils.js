@@ -1,4 +1,4 @@
-import { MOCK_DATA } from "../mock/data"
+import  {MOCK_DATA} from "../mock/data"
 
 export const pedirDatos = () => {
     return new Promise ((resolve,reject) => {

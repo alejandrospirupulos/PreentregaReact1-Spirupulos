@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { pedirDatos } from "../../utils/utils"
 import { Itemlist } from "../Itemlist/Itemlist"
 import { useParams } from "react-router-dom"
+import Spinner from "../Loader/Spinner"
 
 const Itemlistcontainer = () => {
 
@@ -29,7 +30,7 @@ const items = categoriaId
         <>
           {
             loading
-            ? <h2></h2> 
+            ? <Spinner/>
             : <Itemlist productos={productos}/>
           }
         </>
