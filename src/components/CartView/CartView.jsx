@@ -3,24 +3,16 @@ import { CartContext } from '../../context/CartContext'
 import trashIcon from '../../assets/trash.svg'
 import { UserContext } from '../ItemDetail/UserContext'
 import { Link } from 'react-router-dom'
+import { Emtpycart } from './Emtpycart'
 
 
 const CartView = () => {
     const { cart, totalCart, clearCart, removeItem } = useContext(CartContext)
     const { user } = useContext(UserContext)
-
-    if(cart.length === 0) {
-        return(
-            <section>
-                 <h2>Tu carrito esta vacio</h2>
-                        <hr />
-                        <p>Agregar algun producto a tu carrito</p>
-                        <button>
-                            <Link to={"/"}>Volver</Link>
-                        </button>
-            </section>
-        )
-    }
+    
+    if (!user.email) return <h2>No hay usario registrado</h2>
+    if(cart.length === 0) return <Emtpycart/>
+ 
 
     return (
         <section>
