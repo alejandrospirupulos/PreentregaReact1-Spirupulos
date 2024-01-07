@@ -10,6 +10,7 @@ export const ItemCard = ({ item }) => {
       <hr />
       <p>{item.description}</p>
       <p className="text-xl font-bold">Precio: $ {item.price}</p>
+      {item.stock <= 10 && <p>Quedan solo {item.stock} unidades !</p> }
       <button>
         <Link to={`/item/${item.id}`}>Ver mas</Link>
       </button>
