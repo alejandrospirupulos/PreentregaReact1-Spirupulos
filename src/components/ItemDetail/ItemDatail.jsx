@@ -31,7 +31,7 @@ const ItemDetail = ({ item }) => {
      
       {
         isInCart(item.id )
-        ? <button to="/cart">Terminar mi compra</button>
+        ? <button><Link to="/cart">Terminar mi compra</Link></button>
         : <>
             <Quantityselector
         cantidad={cantidad}

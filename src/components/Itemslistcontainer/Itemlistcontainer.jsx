@@ -11,9 +11,6 @@ const Itemlistcontainer = () => {
 
   const {categoriaId} = useParams()
 
-
-
-
 useEffect(() => {
   setLoading(true)
 
@@ -30,11 +27,11 @@ const items = categoriaId
 
     return (
         <>
-            {   
-                  loading
-                    ? <h2>Cargando...</h2>
-                    : <Itemlist productos ={productos} />
-            }   |
+          {
+            loading
+            ? <h2></h2> 
+            : <Itemlist productos={productos}/>
+          }
         </>
     )
 }
