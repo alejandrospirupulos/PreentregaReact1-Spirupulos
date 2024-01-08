@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import  pedirDatos  from '../../utils/utils';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDatail';
-import {db} from "../../firebase/config";
-import { doc,getDoc } from 'firebase/firestore';
-import Loader from '../Loader/Loader';
-
 
 export const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
@@ -15,31 +12,31 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-     
-     // 1 arma la refencia 
-      const docRef = doc(db, 'productos', itemId)
-    // 2 llamar a la refencia 
-      getDoc(docRef)
-      .then((docSnapshot) => {
-        const doc = {
-        ...docSnapshot.data(),
-        id: docSnapshot.id
-        }
-       setItem(doc)
+
+    pedirDatos()
+      .then((data) => {
+      
+        setItem(data.find((producto) => producto.id === Number(itemId)));
       })
-      .finally(() => setLoading(false) )
-  }, []); 
+      .finally(() => setLoading(false));
+  }, [itemId]); // Agregué itemId como dependencia para que el efecto se ejecute cuando cambie
 
   return (
     <>
-    {loading ?(
-      <Loader/>
-    ) : (
-      <ItemDetail item={item}/>
-    )}
+      {loading ? (
+        <h2>Cargando...</h2>
+      ) : (
+        item ? (
+          <ItemDetail item={item} />
+        ) : (
+          <h2>Producto no encontrado</h2>
+        )
+      )}
     </>
   );
 };
 
 export default ItemDetailContainer; 
+
+
 
