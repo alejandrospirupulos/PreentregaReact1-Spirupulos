@@ -6,8 +6,6 @@ export const ColorSelector = ({setColor}) => {
         console.log(event.target.value)
     }
 
-
-
   return (
     <select onChange={handleSelect}>
         <option value="Negro">Negro</option>

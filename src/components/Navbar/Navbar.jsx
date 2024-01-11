@@ -8,7 +8,7 @@ const links = [
     href: '/'
   },
   {
-    label: 'Netebook',
+    label: 'Notebook',
     href: '/productos/Netbook'
   },
   {
@@ -44,7 +44,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <CartWidget/>
+          <CartWidget />
         </nav>
 
       </div>

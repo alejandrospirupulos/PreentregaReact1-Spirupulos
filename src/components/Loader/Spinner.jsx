@@ -2,13 +2,13 @@ import './Spinner.scss';
 
 const Spinner = () => {
     return (
-        <div class='spinner-container'>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
+        <div className='spinner-container'>
+            <div className="slice"></div>
+            <div className="slice"></div>
+            <div className="slice"></div>
+            <div className="slice"></div>
+            <div className="slice"></div>
+            <div className="slice"></div>
         </div>
 
     )
