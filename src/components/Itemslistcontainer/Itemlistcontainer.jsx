@@ -30,7 +30,7 @@ const Itemlistcontainer = () => {
           id: doc.id
         }
       })
-        console.log(docs)
+        // console.log(docs)
         setProductos(docs)
       })
       .finally(() => setLoading(false))
